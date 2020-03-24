@@ -23,7 +23,7 @@ then
 		--volume="/etc/shadow:/etc/shadow:ro" \
 		--volume="/etc/sudoers.d:/etc/sudoers.d:ro" \
 		--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-		--volume="/dev/video0:/dev/video0:ro" \
+		--device="/dev/video0:/dev/video0:rwm" \
 		$imageTag \
 		roscore
 
