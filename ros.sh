@@ -23,9 +23,10 @@ then
 		--volume="/etc/shadow:/etc/shadow:ro" \
 		--volume="/etc/sudoers.d:/etc/sudoers.d:ro" \
 		--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-		--device="/dev/video0:/dev/video0:rwm" \
 		$imageTag \
 		roscore
+
+#for webcam support add --device="/dev/video0:/dev/video0:rwm" \
 
 	echo "Starting interactive terminal..."
 
