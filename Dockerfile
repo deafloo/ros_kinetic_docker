@@ -1,5 +1,6 @@
 FROM ros:kinetic
 
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
 
 	#hier alle apt pakete zum installieren rein + \
@@ -9,10 +10,8 @@ RUN apt-get update && apt-get install -y \
 	ros-kinetic-pepper-robot \
 	ros-kinetic-web-video-server \
 	ros-kinetic-usb-cam \
-	ros-kinetic-image-view 
-
-
-	#ros-kinetic-pepper-meshes	#das installiert evtl. nicht richtig weil einer Nutzereingabe nötig ist -> per hand im image nachinstallieren!
+	ros-kinetic-image-view \
+	ros-kinetic-pepper-meshes	#das installiert evtl. nicht richtig weil einer Nutzereingabe nötig ist -> per hand im image nachinstallieren!
 	
 	#dann im Dockerfile-Verzeichnis neues image bauen
 		#'docker build -t ros:kinetic_custom .'
